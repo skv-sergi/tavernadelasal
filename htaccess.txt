@@ -1,0 +1,32 @@
+# CORE
+#Options -Indexes
+#Options -MultiViews
+#Options +FollowSymlinks
+#AddDefaultCharset UTF-8
+#ServerSignature Off
+#FileETag none
+
+#<Directory  c:/wamp/www/tavernadelasal/>
+#AllowOverride All
+#Require All Granted
+#Allow from all
+
+#<IfModule mod_rewrite.c>
+
+#Options +SymlinksIfOwnerMatches
+RewriteEngine On
+#RewriteRule ^(.*)$ $1.php [NC]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
+
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^ca$ index.php [L]
+#RewriteRule ^es$ es.php [L]
+#RewriteRule ^en$ en.php [L]
+#RewriteRule ^fr$ fr.php [L]
+
+#</IfModule>
+#</Directory>
