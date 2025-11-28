@@ -1,5 +1,8 @@
 <?php
 
+// Get current page from URL parameter or default to 'ca'
+$current_page = isset($_GET['lang']) ? $_GET['lang'] : 'ca';
+
 // Check page
 switch ($current_page) {
     case 'es':

@@ -1,0 +1,61 @@
+/*! **********************************************
+  * Filename: style.css
+  * Website: Hillside CSS Framework
+  * Author: Hillside Agency
+  * Author URI: https://www.hillside.agency/
+  * Date: 24/07/2023
+  * Version: 1.0
+**************************************************/
+
+/* Core variables */
+@import "src/variables.css";
+@import "src/mixins.css";
+
+/* Reset and dependencies */
+/* @import "src/reset.css"; */
+
+/* Universal seletors */
+@import "src/general.css";
+
+/* Helpers classes */
+/* @import "src/helpers.css"; */
+
+/* https://milligram.io */
+@import "src/milligram.css";
+/* @import "src/buttons.css";
+@import "src/forms.css";
+@import "src/grids.css"; */
+
+/* Components */
+/* @import "src/cards.css";
+@import "src/lists.css";
+@import "src/blocks.css"; */
+
+/* Header classes */
+@import "src/header.css";
+
+/* Masthead classes */
+/* @import "src/masthead.css"; */
+
+/* Sections classes */
+/* @import "src/sections.css"; */
+
+/* Footer classes */
+@import "src/footer.css";
+
+/* Pages classes */
+@import "src/pages.css";
+
+/* Blog classes */
+/* @import "src/posts.css"; */
+
+/* Icons */
+@import "src/ionicons.css";
+
+/* JS plugins classes */
+@import "src/plugins.css";
+/* @import "src/plugins/blazy.css";
+@import "src/plugins/tabs.css";
+@import "src/plugins/parvus.css";
+@import "src/plugins/swiffy-slider.css";
+@import "src/plugins/accordion.css"; */

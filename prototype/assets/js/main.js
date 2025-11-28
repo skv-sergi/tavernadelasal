@@ -2,6 +2,10 @@
    jQuery: all the custom stuff!
    ========================================================================== */
 
+// @prepros-prepend vendor/jquery-1.11.2.min.js
+// @prepros-prepend plugins.js
+
+
 $(document).ready(function() {
     
     
@@ -87,20 +91,77 @@ $(document).ready(function() {
         
     
     /* Animated logo & header */
-    var changeSize = $(window).height() - 600;
-    $(window).scroll(function() {
+    /* var changeSize = $(window).height() - 600;
+
+    function checkScrollClasses() {
         var scroll = getCurrentScroll();
+        var scrollHeight = $(document).height();
+        var windowHeight = $(window).height();
+        var distanceFromBottom = scrollHeight - (scroll + windowHeight);
+
         if ( scroll >= changeSize ) {
             $('body').addClass('scrolled');
-            }
-            else {
-                $('body').removeClass('scrolled');
-            }
+        }
+        else {
+            $('body').removeClass('scrolled');
+        }
+
+        if ( distanceFromBottom <= 600 && scroll >= changeSize ) {
+            $('body').addClass('near-bottom');
+        }
+        else {
+            $('body').removeClass('near-bottom');
+        }
+    }
+
+    $(window).scroll(function() {
+        checkScrollClasses();
     });
-    
+
+    // Check on page load in case user reloaded while scrolled
+    checkScrollClasses();
+
+    function getCurrentScroll() {
+        return window.pageYOffset;
+    } */
+
+    var changeSize = $(window).height() - 600;
+    var changeSizeDouble = 2000;
+
+    function checkScrollClasses() {
+        var scroll = getCurrentScroll();
+        var scrollHeight = $(document).height();
+        var windowHeight = $(window).height();
+        var distanceFromBottom = scrollHeight - (scroll + windowHeight);
+
+        if ( scroll >= changeSize ) {
+            $('body').addClass('scrolled');
+        }
+        else {
+            $('body').removeClass('scrolled');
+        }
+
+        // Add more-scrolled at 1800px OR 600px before bottom (whichever comes first)
+        if ( scroll >= changeSizeDouble || (scrollHeight <= 2600 && distanceFromBottom <= 600) ) {
+            $('body').addClass('more-scrolled');
+        }
+        else {
+            $('body').removeClass('more-scrolled');
+        }
+    }
+
+    $(window).scroll(function() {
+        checkScrollClasses();
+    });
+
+    // Check on page load in case user reloaded while scrolled
+    checkScrollClasses();
+
     function getCurrentScroll() {
         return window.pageYOffset;
     }
+
+
 
     
     
@@ -118,24 +179,27 @@ $(document).ready(function() {
     
     
     /* Smooth scrolling */
-    $('#one-btn, #two-btn').click(function() {
-        $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top
-        }, {
-            duration: 500,
-            easing: 'swing'
-        });
-        return false;
-    });
+    /* $('#one-btn, #two-btn').click(function(event) {
+        event.preventDefault();
+        var target = $($(this).attr('href'));
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, {
+                duration: 500,
+                easing: 'swing'
+            });
+        }
+    }); */
     
-    $('#back-to-top').click(function() {
+    $('#back-to-top').click(function(event) {
+        event.preventDefault();
         $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top
+            scrollTop: 0
         }, {
             duration: 1500,
             easing: 'swing'
         });
-        return false;
     });
     
     

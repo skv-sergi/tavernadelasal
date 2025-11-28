@@ -30,7 +30,7 @@ body {
 }
 
 blockquote {
-  border-left: 0.4rem solid @skyblue;
+  border-left: 0.4rem solid var(--skyblue);
   margin-left: 0;
   margin-right: 0;
   padding: 1rem 1.5rem;
@@ -46,8 +46,8 @@ button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'] {
-  background-color: @blue;
-  border: 0.1rem solid @blue;
+  background-color: var(--blue);
+  border: 0.1rem solid var(--blue);
   border-radius: 0;
   color: #ffffff;
   cursor: pointer;
@@ -86,8 +86,8 @@ input[type='reset']:hover,
 input[type='reset']:focus,
 input[type='submit']:hover,
 input[type='submit']:focus {
-  background-color: @darkgrey;
-  border-color: @darkgrey;
+  background-color: var(--darkgrey);
+  border-color: var(--darkgrey);
   color: #fff;
   outline: 0;
 }
@@ -97,7 +97,7 @@ button.button-outline,
 input[type='button'].button-outline,
 input[type='reset'].button-outline,
 input[type='submit'].button-outline {
-  color: @grey;
+  color: var(--grey);
   background-color: transparent;
     
     -webkit-transition: all 0.4s linear;
@@ -122,9 +122,9 @@ input[type='reset'].button-outline:hover,
 input[type='reset'].button-outline:focus,
 input[type='submit'].button-outline:hover,
 input[type='submit'].button-outline:focus {
-  color: @blue;
+  color: var(--blue);
   background-color: transparent;
-  border-color: @blue;
+  border-color: var(--blue);
 }
 
 .button.button-clear,
@@ -132,7 +132,7 @@ button.button-clear,
 input[type='button'].button-clear,
 input[type='reset'].button-clear,
 input[type='submit'].button-clear {
-  color: @blue;
+  color: var(--blue);
   background-color: transparent;
   border-color: transparent;
     
@@ -199,7 +199,7 @@ select {
           appearance: none;
     color: rgba(255, 255, 255, 0.75);
     background-color: transparent;
-    border: 0.1rem solid @blue;
+    border: 0.1rem solid var(--blue);
     -webkit-border-radius: 0;
     border-radius: 0;
     box-shadow: none;
@@ -229,7 +229,7 @@ input[type='text']:focus,
 input[type='url']:focus,
 textarea:focus,
 select:focus {
-  border: 0.1rem solid @blue;
+  border: 0.1rem solid var(--blue);
   outline: 0;
     color: rgba(255, 255, 255, 1);
 }
@@ -367,11 +367,11 @@ input[type='radio'] {
     }
 }
 a {
-  color: @blue;
+  color: var(--blue);
   text-decoration: none;
 }
 a:hover {
-  color: @black;
+  color: var(--black);
 }
 
 dl,

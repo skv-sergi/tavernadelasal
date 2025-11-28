@@ -1,0 +1,24 @@
+/*********************************************
+  * Filename: style.css
+  * Website: http://tavernadelasal.com/
+  * Author: Sokvist
+  * Author URI: http://www.sokvist.com
+  * Date: 25/04/2018
+  * Version: 1.0 
+*********************************************/
+
+
+@import "milligram.css";
+@import "variables.css";
+@import "mixins.css";
+
+
+
+
+
+
+/* Responsive & Plugins */
+/* --------------------------------------------------------------------------- */
+/* @import "pages.css"; */
+@import "plugins.css";
+

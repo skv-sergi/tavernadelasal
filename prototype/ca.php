@@ -28,7 +28,7 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style-min.css">
     
     <link rel="canonical" href="http://tavernadelasal.com/">
     <link hreflang="es" href="http://tavernadelasal.com/es/" rel="alternate">
@@ -114,11 +114,11 @@
                     <input name="check_out_date" class="datepicker-input" data-language="es" data-position="top right" data-date-format="dd/mm/yyyy" id="check_out_date" value="" type="text" data-init-val="null">
                     <input name="commit" value="Reservar" type="submit">
                     
-                    <a class="offers" href="popups/offer-ca.html" title="Avantatges" rel="modal:open">Avantatges</a>
-                    
                 </div>
             </fieldset>
         </form>
+
+        <a class="offers" href="popups/offer-ca.html" title="Avantatges" rel="modal:open">Avantatges</a>
 
     </div><!-- /.book-online -->
     
@@ -130,12 +130,16 @@
     
     <div id="btm-frame">
         <h2>Boutique Hotel Only Adults</h2>
-        <nav>
+
+        <div class="arrow-nav">
+            <span class="icon ion-android-arrow-down down bounce" id="one-btn">More</span>
+        </div>
+        <!-- <nav>
             <ul id="arrow-nav" class="arrow-nav">
                 <li><a href="#one" class="icon ion-android-arrow-down down bounce" id="one-btn">More</a></li>
                 <li><a href="#two" class="icon ion-android-arrow-down down" id="two-btn">Next</a></li>
             </ul>
-        </nav>
+        </nav> -->
     </div>
     
 
@@ -396,10 +400,7 @@
     </footer>
     
 
-
-    <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/js/main.min.js"></script>
+    <script src="assets/js/main-min.js?v=1.0"></script>
 
     <script>
         /*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

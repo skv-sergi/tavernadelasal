@@ -1,8 +1,8 @@
 /*! Pages */
-// ===========================================================================================
+/* ========================================================= */
 
 /* Intro */
-/*********************************************************************************/
+/***********************************************************/
 
 .intro-pages {
     position: fixed;
@@ -43,7 +43,7 @@
 
 @media only screen and (min-width: 1025px) {
     .bg-image {
-        //background-attachment: fixed;
+        /*background-attachment: fixed;*/
     }
 
     #rooms .bg-image {
@@ -258,7 +258,11 @@
     max-width: 343px;
     border: 10px solid #fff;
     opacity: 1;
-    .transition04;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    transition: all 0.4s;
 }
 
 .gallery ul a:hover img {
@@ -354,7 +358,11 @@
     float: left;
     border: 10px solid #fff;
     opacity: 1;
-    .transition04;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    transition: all 0.4s;
 }
 
 .lightbox ul a:hover img {
@@ -441,7 +449,11 @@
     font-size: 1.2em;
     border-radius: 0.4rem;
     margin-top: 2em;
-    .transition03;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .offer-btns .col-left a {
